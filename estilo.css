@@ -1,0 +1,216 @@
+
+/************************************************************************************************/
+
+
+
+/***********************************     layout    *********************************************/
+html, body, .capa{
+	height: 100%;
+    overflow: auto;/**exibe a barra de rolagem solmente quando necessários**/
+}
+
+body{
+	
+	background: url('imagens/capa.png'),
+				url('imagens/ruido.png'),
+				linear-gradient(80deg,#ff4169,#7c26f8);/**didive a image,m ruido nas 2 corws selecionadas**/
+				background-attachment: fixed;/**FIXA A IMAGEM NO LUGAr e o texto se move**/
+				font-family: Helvetica,Arial,sans-serif;
+				overflow-x:  hidden;/* remove a barra de navegaçao na vertical*/
+}
+
+.img-logo{
+	height: 40px;
+	width: 132px;
+	background: url('imagens/spotify.svg') no-repeat;
+	display: block;
+	background-size: contain;
+	color:transparent;
+}
+
+nav.navbar-transparente{
+/**a classe navbar-transparente do css sobrepoe as configuraçoes da classe navbar.defaut**/
+	
+	padding: 15px,0px /**aumenta 15 em cima e em baixo e 0 nos lados da bordaa**/
+	border: none;/**a torna a barra sem bordaa**/
+	background: rgba(0 , 0 , 0 , 0.6);
+
+}
+
+.navbar-brand{
+	
+	padding: 5px 15px;
+}
+
+.divisor{
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a, footer .nav a {
+	color: white;
+}
+.navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover {
+	color:#9bf0e1;
+	background: none;
+}
+
+/**imagem de capa**/
+	.capa{
+		border: 1px solid blue;
+		display: table;/**tabela fica na base da hierarquia**/
+		width: 100%;
+	}
+
+	.texto-capa{
+		text-align: center;
+		color: white; 
+		display: table-cell;/** a celula da tabela fica na dentro de table da hierarquia**/
+		vertical-align: middle;
+	}
+
+
+	.btn-custom
+	{
+		color: white;/** botao personalizado com da fonte**/
+		-webkit-border-radius: 500px;
+		-moz-border-radius: 500px;
+		border:1px solid red;
+	/**	padding: 10px 35px;
+		margin: 10px 15px;**/
+		text-transform: uppercase;
+		transition: background 0.4s, color0.4s;
+	}
+
+		.btn-roxo{
+			background: #7c25f8;
+		}
+
+		.btn-roxo:hover{
+			background: #6207e3;
+		}
+
+		.btn-branco{
+			border:2px solid white	;
+		}
+
+		.btn-branco:hover{
+			background: #6207e3;
+			color:black;
+		}
+
+		#servicos{
+			background: white;
+			padding-top: 20px;
+			padding-bottom:20px;
+		}
+
+		.albuns{
+			padding: 10px 0px 10px 0px;
+		}
+
+		#recursos{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			color: white;
+		}
+
+
+		.rotacionar{
+			transform: rotate(30deg);
+			-webkit-transform: rotate(30deg);/*safari opera chrome*/
+			-ms-transform:rotate(30deg);/*ie9*/
+			padding-left: 80px;
+			width: 90%;
+		}
+
+		/*rodape*/
+		footer{
+			background: #000;
+			padding: 50px 0px 20px 0px ;
+			position: relative;
+
+		}
+		.item_rede_social{
+			float: right;
+		}
+/************************************************************************************************/
+
+h1{
+	
+	font-weight: 900;
+	letter-spacing: -8px;
+	margin-bottom:50px;
+}
+
+
+@media screen and (max-width: 767px){
+
+	h1{
+		font-size: 50px;
+	}
+
+	.btn.custom{/*utilizando media query, a classe btn.custon pega as definiçoes anteriores e adiciona as desta chave*/
+		margin: 10px 15px;
+	}
+  	body{
+	background: url('imagens/TESTE.png'),
+    }
+}
+
+
+/**medium**/
+@media screen and (min-width: 768px){
+
+	h1{
+		font-size: 70px;
+	}
+
+}
+
+/**lagre**/
+@media screen and (min-width: 1200px){
+
+	h1{
+		font-size: 100px;
+	}
+
+}
+
+
+
+
+
+
+
+h2{
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+h3{
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+
+#servicos h2, #servicos h3{
+	color: #7c25f8;
+
+}
+
+
+ #recursos h3{
+	color: #9bf0e1;
+}
+
+
+#rodape h4{
+color: #919496;
+font-size: 12px;
+text-transform: uppercase;
+
+}
